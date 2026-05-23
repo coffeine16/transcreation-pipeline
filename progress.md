@@ -21,3 +21,29 @@ Description: "Verkürzen Sie Ihre Bereitstellungszeiten um den Faktor 60."
 - Author remaining 3 market cards (Brazil, Japan, India)
 - Engineer the prompt properly with dynamic expressions
 - First structured output with schema enforcement
+
+## Day 2 — Dynamic Expressions + Multi-Client Testing
+
+### What's done
+- Authored three additional market cards: Brazil (pt-BR), Japan (ja-JP), India (en-IN)
+- Replaced hardcoded prompt with Code node that dynamically builds prompt from Sheets data
+- Wired HTTP Request to use dynamically-built JSON body
+- Tested system across multiple client × market combinations:
+  - Acme Cloud × Germany: technical, confident, UWG-compliant German
+  - GreenLeaf Organics × Brazil: warm, relational, Brazilian Portuguese
+  - TechReach Edu × Japan: indirect, trust-focused, polite Japanese register
+  
+All three outputs demonstrated proper cultural adaptation and brand voice matching without prompt changes.
+
+### System architecture now complete
+- n8n workflow: fully dynamic
+- Client profiles: 3 (Acme Cloud, GreenLeaf Organics, TechReach Edu)
+- Market cards: 4 (Germany, Brazil, Japan, India) with cultural research
+- Prompt generation: Code node with expression-based string interpolation
+- LLM calls: Gemini 2.5 Flash with structured JSON output
+
+### Next (Day 3)
+- Add Claude Haiku fallback (requires $5 Anthropic top-up)
+- Implement deterministic post-checks (banned terms, char count, glossary)
+- Build error handling and retry logic
+- Test edge cases and failure modes
